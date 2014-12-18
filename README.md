@@ -19,6 +19,6 @@
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  
- [Homepage](querybuilder.lk-development.de)
+ [Homepage](http://querybuilder.lk-development.de)
  
- [API Dokumentation](querybuilder.lk-development.de/doku/)
+ [API Dokumentation](http://querybuilder.lk-development.de/doku/)
