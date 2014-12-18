@@ -84,10 +84,11 @@ class QueryBuilder {
      */
     public function select() {
         $this->query("SELECT ");
-        if (empty(func_get_args())) {
+        $args = func_get_args();
+        if (empty($args)) {
             $this->addToQuery("*");
         } else {
-            $this->addToQuery(implode(",", func_get_args()));
+            $this->addToQuery(implode(",", $args));
         }
         return $this;
     }

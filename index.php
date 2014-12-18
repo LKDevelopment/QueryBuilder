@@ -22,6 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+require_once 'QueryBuilder.class.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,7 +55,7 @@
         </pre>
         <label>Ergebnis:</label>
         <samp> <?php
-            require_once 'QueryBuilder.class.php';
+            
             $queryBuilderSELECT = new lkdevelopment\QueryBuilder();
             $queryBuilderSELECT->select("bestellungID", "bestellungDatum")->from("bestellungen", "b")->where("b.bestellungID = :bid")->groupBy("b.bestellDatum")->limit(1, 3);
             echo $queryBuilderSELECT;
