@@ -36,19 +36,19 @@
 namespace lkdevelopment;
 
 //BSP:
-//    $queryBuilderSELECT = new \simk\Framework\datenbank\QueryBuilder();
+//    $queryBuilderSELECT = new lkdevelopment\QueryBuilder();
 //$queryBuilderSELECT->select("bestellungID","bestellungDatum")->from("bestellungen","b")->where("b.bestellungID = :bid")->groupBy("b.bestellDatum")->limit(1,3);
 //
-//$queryBuilderInsert = new \simk\Framework\datenbank\QueryBuilder();
+//$queryBuilderInsert = new lkdevelopment\QueryBuilder();
 //$queryBuilderInsert->insertInto("bestellung_status", array("bestellung_id" => ":bestellungid", "rueckgabe" => ":rueckgabe"));
 //
-//$queryBuilderUpdate = new \simk\Framework\datenbank\QueryBuilder();
+//$queryBuilderUpdate = new lkdevelopment\QueryBuilder();
 //$queryBuilderUpdate->update("bestellungen", array("bestellungDatum" => ":bDatum"))->where("bestellungID = :bid");
 //
-//$queryBuilderDelete = new \simk\Framework\datenbank\QueryBuilder();
+//$queryBuilderDelete = new lkdevelopment\QueryBuilder();
 //$queryBuilderDelete->deleteFrom("bestellungen")->where("bestellungDatem > :bDatum")->limit(2);
 //
-//$queryBuilderFree = new \simk\Framework\datenbank\QueryBuilder();
+//$queryBuilderFree = new lkdevelopment\QueryBuilder();
 //$queryBuilderFree->query("TRUNCATE `bestellungen`");
 
 class QueryBuilder {
@@ -253,9 +253,9 @@ class QueryBuilder {
                 unset($values[$spalte]);
             } else {
                 if ($i == 0) {
-                    $this->addToQuery("`$spalte` = '$value'");
+                    $this->addToQuery("`$spalte` = $value");
                 } else {
-                    $this->addToQuery(",`$spalte` = '$value'");
+                    $this->addToQuery(",`$spalte` = $value");
                 }
                 $i++;
             }
